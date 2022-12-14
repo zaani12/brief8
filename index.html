@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>magasin</title>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Gestion d'articles dans un magasin de vente de produits cosmétiques</h2>
+        </div>
+    <!-- <table> -->
+        
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div class="form-control ">
+                        <label for="Nom">Nom</label>
+                        <input type="text" name="Nom" id="Nom">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation"></i>
+                        <small>Message d'erreur</small>
+                    </div>
+                    <div class="form-control ">
+                        <label for="marque">marque</label>
+                        <input type="text" name="marque" id="marque">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation"></i>
+                        <small>Message d'erreur</small>
+                    </div>
+                    <div class="form-control ">
+                        <label for="ddp">date de production</label>
+                        <input type="date" name="ddp" id="ddp">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation"></i>
+                        <small>Message d'erreur</small>
+                    </div>
+                    <div class="form-control ">
+                        <label for="perPrice">prix</label>
+                        <input type="number" name="perPrice" id="perPrice">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation"></i>
+                        <small>Message d'erreur</small>
+                    </div>
+                    <div class="type-control"  > 
+                        <select class="type-select" id="type" id="input-type" >
+                            <label for="Son type:" >Son type:</label>
+                            <option disabled selected value id="type"  > -- on type: -- </option>
+                            <option >hygiène et toilette</option>
+                            <option >soins esthétiques</option>
+                            <option >produits solaires</option>
+                            <option >beauté des mains et des pieds</option>
+                            <option>produits de maquillage</option>
+                            <option >entretien</option>
+                            <option">capillaires</option>
+                            <option >parfums</option>
+                          </select>
+                          <i class="fas fa-check-circle"></i>
+                          <i class="fas fa-exclamation"></i>
+                          <small></small>
+                    </div>   
+                    <div class="error-promp"  > 
+                        <select class="type-select" id="promo" id="input-promo" >
+                            <label for="Son type:" >Est en promotion: </label>
+                            <option disabled selected value id="type"  > -- on chois: -- </option>
+                            <option >oui</option>
+                            <option >non</option>
+                          </select>
+                          <i class="fas fa-check-circle"></i>
+                          <i class="fas fa-exclamation"></i>
+                          <small></small>
+                    </div>   
+                      
+
+                    <div class="form_action--button">
+                        <button id="btn1">submit</button>
+                        <input type="reset" value="update" id="btn2">
+                    </div>
+                    <td>
+                        <table class="table"  id="storeList">
+                            <thead>
+                                <tr>
+                                    <th>number</th>
+                                    <th>Nom</th>
+                                    <th>marque</th>
+                                    <th>date de production</th>
+                                    <th>prix</th>
+                                    <th>type</th>
+                                    <th>promotion</th>
+                                    <th>Action</th>
+    
+                                </tr>
+                            </thead>
+                            <tbody id="tablebody">
+    
+                            </tbody>
+                        </table>
+                    </td>
+                </form>
+               
+              
+              
+   
+    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./rexp.js"></script>
+
+    <div>
+        <!-- modal-content -->
+        <div id="product_info" class="product_info">
+            <div class="modal-content">
+              <span onclick="document.getElementById('product_info').style.display='none'" class='close' title="Close">&#10005;</span>
+              <div id="message"></div>
+              <button type="button" onclick="document.getElementById('product_info').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </div>
+            <!-- mpdal-delet -->
+            <div id="id01" class="modal-delet">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content2" >
+                  <div class="container">
+                    <h1>Delete Account</h1>
+                    <p>Are you sure you want to delete your account?</p>
+                  
+                    <div class="clearfix">
+                      <button type="button" onclick="deleteData()" class="cancelbtn"> Delete</button>
+                      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Cancel</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+
+<body>
+    
+</html>
